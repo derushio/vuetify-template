@@ -15,6 +15,7 @@
     "vue-class-component": "^6.0.0",
     "vue-property-decorator": "^7.0.0",
     "vue-router": "^3.0.1",
+    "vuetify": "^1.3.0",
     "vuex": "^3.0.1"
   },
   "devDependencies": {
@@ -32,6 +33,8 @@
     "stylus-loader": "^3.0.2",
     "typescript": "^3.0.0",
     "vue-cli-plugin-pug": "^1.0.7",
-    "vue-template-compiler": "^2.5.17"
+    "vue-cli-plugin-vuetify": "^0.4.6",
+    "vue-template-compiler": "^2.5.17",
+    "vuetify-loader": "^1.0.5"
   }
 }
