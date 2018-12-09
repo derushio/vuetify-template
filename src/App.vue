@@ -1,38 +1,28 @@
-<template>
-  <v-app>
-    <v-toolbar app>
-      <v-toolbar-title class="headline text-uppercase">
-        <span>Vuetify</span>
-        <span class="font-weight-light">MATERIAL DESIGN</span>
-      </v-toolbar-title>
-      <v-spacer></v-spacer>
-      <v-btn
-        flat
-        href="https://github.com/vuetifyjs/vuetify/releases/latest"
-        target="_blank"
-      >
-        <span class="mr-2">Latest Release</span>
-      </v-btn>
-    </v-toolbar>
+<template lang='pug'>
+v-app#app
+    v-navigation-drawer(app temporary v-model='drawer')
+    v-toolbar(app)
+        v-toolbar-side-icon(@click.stop='drawer = !drawer')
+        v-toolbar-title App
 
-    <v-content>
-      <HelloWorld/>
-    </v-content>
-  </v-app>
+    v-content
+        v-container(fluid)
+            router-view
+
+    v-footer(app inset)
 </template>
 
-<script>
-import HelloWorld from './components/HelloWorld'
+<script lang='ts'>
+import { Component, Vue } from 'vue-property-decorator';
 
-export default {
-  name: 'App',
-  components: {
-    HelloWorld
-  },
-  data () {
-    return {
-      //
-    }
-  }
+@Component
+export default class App extends Vue {
+    protected drawer = false;
 }
 </script>
+
+<style lang='stylus'>
+@require '~@/assets/styles/entry/_all.styl';
+
+#app {}
+</style>

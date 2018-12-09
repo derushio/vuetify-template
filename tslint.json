@@ -1,19 +1,21 @@
 {
-  "defaultSeverity": "warning",
-  "extends": [
-    "tslint:recommended"
-  ],
-  "linterOptions": {
-    "exclude": [
-      "node_modules/**"
-    ]
-  },
-  "rules": {
-    "quotemark": [true, "single"],
-    "indent": [true, "spaces", 2],
-    "interface-name": false,
-    "ordered-imports": false,
-    "object-literal-sort-keys": false,
-    "no-consecutive-blank-lines": false
-  }
+    "defaultSeverity": "warning",
+    "extends": ["tslint:recommended"],
+    "linterOptions": {
+        "exclude": ["node_modules/**", "dist/**", "**/*.json"]
+    },
+    "rules": {
+        "align": false,
+        "indent": [true, "spaces", 4],
+        "interface-name": false,
+        "label-position": false,
+        "max-classes-per-file": false,
+        "no-bitwise": false,
+        "no-consecutive-blank-lines": false,
+        "no-empty-interface": false,
+        "no-string-literal": false,
+        "object-literal-sort-keys": false,
+        "ordered-imports": false,
+        "quotemark": [true, "single"]
+    }
 }
