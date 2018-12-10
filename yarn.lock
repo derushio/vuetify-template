@@ -4352,10 +4352,10 @@ ini@^1.3.4, ini@~1.3.0:
   resolved "https://registry.yarnpkg.com/ini/-/ini-1.3.5.tgz#eee25f56db1c9ec6085e0c22778083f596abf927"
   integrity sha512-RZY5huIKCMRWDUqZlEi72f/lmXKMvuszcMBduliQ3nnWbx9X/ZBQO7DijMEYS9EhHBb2qacRUMtC7svLwe0lcw==
 
-instant-vuetify-overlays@^1.2.5:
-  version "1.2.5"
-  resolved "https://registry.yarnpkg.com/instant-vuetify-overlays/-/instant-vuetify-overlays-1.2.5.tgz#1baafb6a3d53a969fbcf6d587acfb6ddd8a44d9c"
-  integrity sha512-JGmSbUP9Ax6Tjm17mKVnqp0Xgb3dJIdzkxhq0x53bKmB5niPP8ObyXagaS2aKVuf9rgvo/0SuwhFsSRT3xIP8A==
+instant-vuetify-overlays@^1.3.1:
+  version "1.3.1"
+  resolved "https://registry.yarnpkg.com/instant-vuetify-overlays/-/instant-vuetify-overlays-1.3.1.tgz#2312151f1a05ee323de9b7137eb580eb96e475be"
+  integrity sha512-ny1YdVyS4DhWOHbsI5iHRLxOMZX2xqtUt26nVz3SrpSOGabQM6jTDtcpT/k9EtRl9Q0hmAeN3GckxxMo0M3VHA==
   dependencies:
     rimraf "^2.6.2"
     stylus "^0.54.5"
