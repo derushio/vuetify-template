@@ -9,7 +9,7 @@ v-app#app
         v-container(fluid)
             router-view
 
-    v-footer(app inset)
+    v-footer(inset)
 </template>
 
 <script lang='ts'>
