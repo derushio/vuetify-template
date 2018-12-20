@@ -6,8 +6,7 @@ v-app#app
         v-toolbar-title App
 
     v-content
-        v-container(fluid)
-            router-view
+        router-view
 
     v-footer(inset)
 </template>
