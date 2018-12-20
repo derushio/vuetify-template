@@ -1,8 +1,12 @@
-require('dotenv').config();
+const dotenv = require('dotenv');
+const config = Object.assign({},
+    dotenv.config({ path: '.env' }).parsed || {},
+    dotenv.config({ path: '.env.local' }).parsed || {});
+
 const webpack = require('webpack');
 
 const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
-const isProduct = process.env.NODE_ENV == 'production';
+const isProduct = config.NODE_ENV == 'production';
 
 module.exports = {
     css: {
@@ -29,8 +33,8 @@ module.exports = {
         plugins: [
             new webpack.DefinePlugin({
                 'process.env': {
-                    NODE_ENV: `"${process.env.NODE_ENV}"`,
-                    NODE_ENABLE_PWA: `${process.env.NODE_ENABLE_PWA}`,
+                    NODE_ENV: `"${config.NODE_ENV}"`,
+                    NODE_ENABLE_PWA: `${config.NODE_ENABLE_PWA}`,
                 },
             }),
         ],
