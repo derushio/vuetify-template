@@ -9,6 +9,8 @@ const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const isProduct = config.NODE_ENV == 'production';
 
 module.exports = {
+    baseUrl: './',
+
     css: {
         sourceMap: !isProduct,
         loaderOptions: {
