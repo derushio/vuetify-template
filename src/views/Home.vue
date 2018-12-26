@@ -1,5 +1,5 @@
 <template lang='pug'>
-v-container#home(fluid)
+v-container#home(fluid fill-height)
     v-layout(justify-center): v-flex(xs12 sm10 md8)
         hello-world
 </template>
