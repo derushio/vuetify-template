@@ -1,7 +1,6 @@
 <template lang='pug'>
-v-container#home(fluid fill-height)
-    v-layout(justify-center): v-flex(xs12 sm10 md8)
-        hello-world
+v-layout#home(fill-height)
+    hello-world
 </template>
 
 <script lang='ts'>
