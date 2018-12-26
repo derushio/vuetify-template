@@ -21,7 +21,7 @@ export default class App extends Vue {
 </script>
 
 <style lang='stylus'>
-@require '~@/assets/styles/entry/_all.styl';
+@require '~@/assets/styles/entry/_app.styl';
 
 #app {}
 </style>
