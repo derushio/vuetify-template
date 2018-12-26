@@ -1,0 +1,15 @@
+@require './_variable.styl';
+
+// for html
+scroll-view()
+    overflow-x: hidden; overflow-y: visible;
+    width: 100%; height: auto;
+
+// for html
+static-view()
+    // height relay
+    &, body, #app, #app > div, #content, #content > div
+        height: 100%;
+
+    overflow-x: hidden; overflow-y: hidden;
+    width: 100%; height: 100%;

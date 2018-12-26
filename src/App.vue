@@ -21,5 +21,9 @@ export default class App extends Vue {
 <style lang='stylus'>
 @require '~@/assets/styles/entry/_app.styl';
 
-#app {}
+html
+    overflow-y: auto;
+
+#app
+    background: transparent;
 </style>
