@@ -5,7 +5,7 @@ v-app#app
         v-toolbar-side-icon(@click.stop='drawer = !drawer')
         v-toolbar-title App
 
-    v-content
+    v-content#content
         router-view
 
     v-footer(inset)
@@ -22,6 +22,10 @@ export default class App extends Vue {
 
 <style lang='stylus'>
 @require '~@/assets/styles/entry/_app.styl';
+
+html, body
+    // vhを使わないほうがスマホのアドレスバーの挙動が自然になる
+    width: 100%; height: 100%;
 
 #app {}
 </style>

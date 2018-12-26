@@ -17,9 +17,7 @@ export default class Home extends Vue {}
 </script>
 
 <style lang='stylus' scoped>
-@require '~@/assets/styles/entry/_view.styl';
+@require '~@/assets/styles/entry/_variable.styl';
 
-#home
-    // mixin overflow-y overflow-x
-    view: auto hidden;
+#home {}
 </style>
