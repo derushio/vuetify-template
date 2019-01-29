@@ -14,5 +14,7 @@ export default class HelloWorld extends Vue {
 </script>
 
 <style lang='stylus' scoped>
+@require '~@/assets/styles/entry/_variable.styl';
+
 .hello-world {}
 </style>

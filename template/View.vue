@@ -1,18 +1,12 @@
 <template lang='pug'>
-v-layout#home(fill-height column)
-    hello-world
+v-layout#VUE_NAME(fill-height column)
 </template>
 
 <script lang='ts'>
 import { Component, Vue } from 'vue-property-decorator';
-import HelloWorld from '@/components/HelloWorld.vue';
 
-@Component({
-    components: {
-        HelloWorld,
-    },
-})
-export default class Home extends Vue {}
+@Component
+export default class CLASS_NAME extends Vue {}
 </script>
 
 <style lang='stylus'>
@@ -22,5 +16,5 @@ html
     scroll-view: true;
     // static-view: true;
 
-#home {}
+#VUE_NAME {}
 </style>
