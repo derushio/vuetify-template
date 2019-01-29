@@ -2,10 +2,13 @@ const dotenv = require('dotenv');
 const env = Object.assign({},
     dotenv.config({ path: '.env' }).parsed || {},
     dotenv.config({ path: '.env.local' }).parsed || {});
+env.NODE_ENV = (env.NODE_ENV === 'production')
+    ? env.NODE_ENV
+    : process.env.NODE_ENV;
+console.log('NODE_ENV:', env.NODE_ENV);
 
 const webpack = require('webpack');
 
-const UglifyJsPlugin = require('uglifyjs-webpack-plugin');
 const isProduct = env.NODE_ENV == 'production';
 
 module.exports = {
@@ -40,20 +43,6 @@ module.exports = {
                 },
             }),
         ],
-
-        optimization: {
-            minimizer: [
-                new UglifyJsPlugin({
-                    sourceMap: !isProduct,
-                    uglifyOptions: {
-                        ecma: 8,
-                        compress: {
-                            warnings: false,
-                        },
-                    },
-                }),
-            ],
-        },
 
         devtool: isProduct ? false : '#source-map',
     }
