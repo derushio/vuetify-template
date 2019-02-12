@@ -1,5 +1,5 @@
 <template lang='pug'>
-v-layout#home(fill-height column)
+v-layout#Home(fill-height column)
     hello-world
 </template>
 
@@ -22,5 +22,5 @@ html
     scroll-view: true;
     // static-view: true;
 
-#home {}
+#Home {}
 </style>
