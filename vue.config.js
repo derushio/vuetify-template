@@ -12,7 +12,7 @@ const webpack = require('webpack');
 const isProduct = env.NODE_ENV == 'production';
 
 module.exports = {
-    publicPath: './',
+    publicPath: isProduct ? '/' : './',
 
     css: {
         sourceMap: !isProduct,
