@@ -12,6 +12,7 @@ const webpack = require('webpack');
 const isProduct = env.NODE_ENV == 'production';
 
 module.exports = {
+    // 商用の場合はpathをきちんと設定したほうが良い
     publicPath: isProduct ? '/' : './',
 
     css: {
