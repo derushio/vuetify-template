@@ -1,5 +1,4 @@
 /* tslint:disable:no-console */
-
 import { register } from 'register-service-worker';
 
 if (process.env.NODE_ENV === 'production' && process.env.NODE_ENABLE_PWA) {

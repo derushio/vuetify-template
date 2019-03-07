@@ -1,4 +1,4 @@
-import '@/registerServiceWorker';
+import '@/plugins/registerServiceWorker';
 
 import Vue from 'vue';
 import '@/plugins/vuetify';
