@@ -1,5 +1,5 @@
 <template lang='pug'>
-v-layout#VUE_NAME(fill-height column)
+v-layout#CLASS_NAME(fill-height column)
 </template>
 
 <script lang='ts'>
@@ -16,5 +16,5 @@ html
     scroll-view: true;
     // static-view: true;
 
-#VUE_NAME {}
+#CLASS_NAME {}
 </style>
