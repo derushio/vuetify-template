@@ -1,5 +1,5 @@
 
-type ICodeceptCallback = (i: CodeceptJS.私は) => void;
+type ICodeceptCallback = (i: CodeceptJS.I) => void;
 
 declare class FeatureConfig {
   retry(times:number): FeatureConfig
@@ -95,8 +95,8 @@ declare class Locator implements ILocator {
 
 declare function actor(customSteps?: {
   [action: string]: (this: CodeceptJS.I, ...args: any[]) => void
-}): CodeceptJS.私は;
-declare function actor(customSteps?: {}): CodeceptJS.私は;
+}): CodeceptJS.I;
+declare function actor(customSteps?: {}): CodeceptJS.I;
 declare function Feature(title: string, opts?: {}): FeatureConfig;
 declare const Scenario: {
   (title: string, callback: ICodeceptCallback): ScenarioConfig;
@@ -126,7 +126,7 @@ declare function pause(): void;
 declare const codeceptjs: any;
 
 declare namespace CodeceptJS {
-  export interface 私は {
+  export interface I {
     amAcceptingPopups() : void,
     acceptPopup() : void,
     amCancellingPopups() : void,
@@ -280,7 +280,7 @@ declare namespace CodeceptJS {
     waitForDetached(locator: string, sec: number) : void,
     debug(msg: string) : void,
     debugSection(section: string, msg: string) : void,
-    say: () => any; 
+    say: () => any;
     retryStep(opts: string) : void,
 
   }
