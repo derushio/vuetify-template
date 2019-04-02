@@ -1,4 +1,5 @@
 @require './_variable.styl';
+@require '../style/_common.styl';
 
 // for html
 scroll-view()
@@ -19,3 +20,8 @@ static-view()
 
     #content
         overflow-x: hidden;
+
+main-pane($max-width)
+    width: 100%; max-width: $max-width;
+    height: 100%;
+    x-center();
