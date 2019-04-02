@@ -1,5 +1,5 @@
 <template lang='pug'>
-v-layout#CLASS_NAME(fill-height column)
+v-layout#CLASS_NAME.fill-height(column)
 </template>
 
 <script lang='ts'>
