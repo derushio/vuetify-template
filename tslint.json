@@ -2,7 +2,7 @@
     "defaultSeverity": "warning",
     "extends": ["tslint:recommended"],
     "linterOptions": {
-        "exclude": ["node_modules/**", "dist/**", "tests/**", "**/*.json"]
+        "exclude": ["node_modules/**", "dist/**", "**/*.json", "tests/**/*.d.ts"]
     },
     "rules": {
         "align": false,
