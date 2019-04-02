@@ -3,7 +3,7 @@ exports.config = {
   output: './tests/e2e/outputs',
   helpers: {
     Puppeteer: {
-      url: 'http://localhost'
+      url: 'http://localhost:8080/'
     }
   },
   include: {

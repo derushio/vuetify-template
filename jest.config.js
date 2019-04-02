@@ -22,9 +22,9 @@ module.exports = {
     'jest-serializer-vue'
   ],
   testMatch: [
-    '**/tests/unit/**/*.spec.(js|jsx|ts|tsx)|**/__tests__/*.(js|jsx|ts|tsx)'
+    '**/tests/unit/specs/**/*.spec.(js|jsx|ts|tsx)'
   ],
-  testURL: 'http://localhost/',
+  testURL: 'http://localhost:8080/',
   globals: {
     'ts-jest': {
       babelConfig: true
