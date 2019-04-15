@@ -1,14 +1,25 @@
+const webpack = require('webpack');
 const dotenv = require('dotenv');
+
+/**
+ * 環境設定
+ * .envが共通ファイル、.env.localが個人用ファイル
+ */
 const env = Object.assign({},
     dotenv.config({ path: '.env' }).parsed || {},
     dotenv.config({ path: '.env.local' }).parsed || {});
+
+/**
+ * ビルド環境
+ */
 env.NODE_ENV = (env.NODE_ENV === 'production')
     ? env.NODE_ENV
     : process.env.NODE_ENV;
 console.log('NODE_ENV:', env.NODE_ENV);
 
-const webpack = require('webpack');
-
+/**
+ * 製品環境判定
+ */
 const isProduct = env.NODE_ENV == 'production';
 
 module.exports = {
