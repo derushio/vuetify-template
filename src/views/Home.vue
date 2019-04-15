@@ -1,5 +1,5 @@
 <template lang='pug'>
-v-layout.fill-height#Home(column)
+v-layout#Home(fill-height column)
     hello-world
 </template>
 
