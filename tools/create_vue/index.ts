@@ -28,17 +28,17 @@ yargs
     )
     .option('type', {
         alias: 't',
-        desc: ''
-            + 'Vue Type: view or component',
+        desc:
+            'Vue Type: view or component',
         type: 'string',
         required: true,
     })
     .option('name', {
         alias: 'n',
-        desc: ''
-            + 'View name (Upper Camel Case)\n'
-            + 'パスを含むことができます\n'
-            + 'ex) path/to/vue/ViewName',
+        desc:
+            'View name (Upper Camel Case)\n' +
+            'パスを含むことができます\n' +
+            'ex) path/to/vue/ViewName',
         type: 'string',
         required: true,
     })
