@@ -56,8 +56,8 @@ import { upperCaseFirst, hyphen } from 'change-case';
 async function main() {
     const pathName = ARGS['name'] as string;
     const regexResult = /^(.*\/)*(.*)$/.exec(pathName) as string[];
-    const name = upperCaseFirst(regexResult[2]);
     const path = regexResult[1] || '';
+    const name = upperCaseFirst(regexResult[2]);
 
     try {
         const type = ARGS['type'] as string;
