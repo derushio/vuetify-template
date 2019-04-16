@@ -10,7 +10,7 @@
  *         yarn global add typescript ts-node
  *         ```
  *     2. Add PATH `yarn global bin`
- * 2. LOCAL INSTALL
+ * 2. or LOCAL INSTALL
  *     1. Install ts-node
  *         ```sh
  *         yarn add typescript ts-node
