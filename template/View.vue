@@ -1,12 +1,12 @@
 <template lang='pug'>
-v-layout#CLASS_NAME(fill-height column)
+v-layout#$__CLASS_NAME__$(fill-height column)
 </template>
 
 <script lang='ts'>
 import { Component, Vue } from 'vue-property-decorator';
 
 @Component
-export default class CLASS_NAME extends Vue {}
+export default class $__CLASS_NAME__$ extends Vue {}
 </script>
 
 <style lang='stylus'>
@@ -16,5 +16,5 @@ html
     scroll-view: true;
     // static-view: true;
 
-#CLASS_NAME {}
+#$__CLASS_NAME__$ {}
 </style>
