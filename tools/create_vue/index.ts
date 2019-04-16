@@ -42,9 +42,9 @@ yargs
         type: 'string',
         required: true,
     })
-    .example('create:view --name `path/to/view/ViewName`',
+    .example('yarn create:view --name `path/to/view/ViewName`',
         '`/src/views/path/to/view/ViewName.vue` を生成します')
-    .example('create:component --name `path/to/component/ComponentName`',
+    .example('yarn create:component --name `path/to/component/ComponentName`',
         '`/src/components/path/to/component/ComponentName.vue` を生成します');
 const ARGS = yargs.parse(process.argv);
 
