@@ -23,7 +23,7 @@ import yargs from 'yargs';
 yargs
     .version('1.0.0')
     .usage(
-        'Usage: yarn create:vue --type view --name [PATH_TO_VIEW]\n' +
+        'Usage: yarn create:vue --type [TYPE_OF_VUE] --name [PATH_TO_VIEW]\n' +
         'Vueファイルを生成します',
     )
     .option('type', {
