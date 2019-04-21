@@ -1,7 +1,7 @@
 <template lang='pug'>
 v-app#app
     v-navigation-drawer(app temporary v-model='drawer')
-    v-toolbar(app color='primary' dark)
+    v-toolbar(app color='primary' dark height='54px')
         v-toolbar-side-icon(@click.stop='drawer = !drawer')
         v-toolbar-title App
 

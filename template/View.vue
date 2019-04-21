@@ -1,5 +1,6 @@
 <template lang='pug'>
 v-layout#$__CLASS_NAME__$(fill-height column)
+    .main-pane
 </template>
 
 <script lang='ts'>
@@ -16,5 +17,7 @@ html
     scroll-view: true;
     // static-view: true;
 
-#$__CLASS_NAME__$ {}
+#$__CLASS_NAME__$
+    .main-pane
+        main-pane();
 </style>

@@ -1,6 +1,7 @@
 <template lang='pug'>
 v-layout#Home(fill-height column)
-    hello-world
+    .main-pane
+        hello-world
 </template>
 
 <script lang='ts'>
@@ -22,5 +23,7 @@ html
     scroll-view: true;
     // static-view: true;
 
-#Home {}
+#Home
+    .main-pane
+        main-pane();
 </style>
