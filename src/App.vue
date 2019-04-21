@@ -22,5 +22,5 @@ export default class App extends Vue {
 @require '~@/assets/styles/entry/_app.styl';
 
 #app
-    background: transparent;
+    background-color: transparent;
 </style>
