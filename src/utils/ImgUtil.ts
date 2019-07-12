@@ -144,7 +144,7 @@ export default class ImgUtil {
         const context = canvas.getContext('2d')!;
         const imageSource = await this.loadImg(image);
         context.drawImage(imageSource, -x, -y);
-        return canvas.toDataURL();
+        return await this.loadImg(canvas.toDataURL());
     }
 
     public static async resize(image: string, maxWidth: number, maxHeight: number) {
@@ -167,7 +167,35 @@ export default class ImgUtil {
         context.drawImage(imageSource,
             0, 0, imageSource.naturalWidth, imageSource.naturalHeight,
             0, 0, dSize.width, dSize.height);
-        return canvas.toDataURL();
+        return await this.loadImg(canvas.toDataURL());
+    }
+
+    public static async resizeForce(image: string, width: number, height: number) {
+        const imageSource = await this.loadImg(image);
+
+        const sAspect = imageSource.naturalWidth / imageSource.naturalHeight;
+        const dAspect = width / height;
+        const dSize = {
+            width, height,
+        };
+        const offset = {
+            x: 0, y: 0,
+        };
+        if (sAspect < dAspect) {
+            dSize.width = dSize.height * sAspect;
+            offset.x = (dSize.height - dSize.width) / 2;
+        } else {
+            dSize.height = dSize.width * (1 / sAspect);
+            offset.y = (dSize.width - dSize.height) / 2;
+        }
+
+        const canvas = document.createElement('canvas');
+        canvas.width = width; canvas.height = height;
+        const context = canvas.getContext('2d')!;
+        context.drawImage(imageSource,
+            0, 0, imageSource.naturalWidth, imageSource.naturalHeight,
+            offset.x, offset.y, dSize.width, dSize.height);
+        return await this.loadImg(canvas.toDataURL());
     }
 
     protected constructor() {}
