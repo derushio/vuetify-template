@@ -3,7 +3,8 @@ v-app#app
     v-navigation-drawer(app temporary v-model='drawer')
     v-toolbar(app color='primary' dark height='54px')
         v-toolbar-side-icon(@click.stop='drawer = !drawer')
-        v-toolbar-title App
+        v-toolbar-items
+            v-btn.title(flat :to='{ name: "Home" }' active-class='') App
 
     v-content#content
         router-view
