@@ -53,6 +53,7 @@ module.exports = {
         plugins: [
             new webpack.DefinePlugin({
                 'process.env': {
+                    APP_NAME: `"${env.APP_NAME}"`,
                     NODE_ENV: `"${env.NODE_ENV}"`,
                     NODE_ENABLE_PWA: `${env.NODE_ENABLE_PWA}`,
                 },
