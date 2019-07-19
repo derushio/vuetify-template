@@ -4,7 +4,7 @@ v-app#app
     v-toolbar(app color='primary' dark height='54px')
         v-toolbar-side-icon(@click.stop='drawer = !drawer')
         v-toolbar-items
-            v-btn.title(flat :to='{ name: "Home" }' active-class='') App
+            v-btn.title.font-weight-regular(flat :to='{ name: "Home" }' active-class='') App
 
     v-content#content
         router-view
