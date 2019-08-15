@@ -8,9 +8,9 @@
     "lint": "vue-cli-service lint",
     "test:e2e": "rm -rf ./tests/e2e/outputs/*; yarn codeceptjs run",
     "test:unit": "vue-cli-service test:unit",
-    "create:vue": "ts-node -r esm tools/create_vue",
-    "create:view": "ts-node -r esm tools/create_vue --type='view'",
-    "create:compo": "ts-node -r esm tools/create_vue --type='component'"
+    "create:vue": "yarn ts-node -r esm tools/create_vue",
+    "create:view": "yarn ts-node -r esm tools/create_vue --type='view'",
+    "create:compo": "yarn ts-node -r esm tools/create_vue --type='component'"
   },
   "dependencies": {
     "@fortawesome/fontawesome-free": "^5.9.0",
@@ -32,6 +32,7 @@
     "@types/jest": "^24.0.15",
     "@types/lodash": "^4.14.136",
     "@types/node": "^12.6.2",
+    "@types/yargs": "^13.0.2",
     "@vue/cli-plugin-babel": "^3.9.2",
     "@vue/cli-plugin-pwa": "^3.9.0",
     "@vue/cli-plugin-typescript": "^3.9.0",
@@ -55,6 +56,6 @@
     "vue-template-compiler": "^2.6.10",
     "vuetify-loader": "^1.2.2",
     "webpack": "^4.35.3",
-    "yargs": "^13.2.4"
+    "yargs": "^13.3.0"
   }
 }
