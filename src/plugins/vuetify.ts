@@ -1,13 +1,11 @@
 import Vue from 'vue';
-import Vuetify from 'vuetify';
-import colors from 'vuetify/es5/util/colors';
-import 'vuetify/src/stylus/app.styl';
+import Vuetify from 'vuetify/lib';
+
+import 'vuetify/dist/vuetify.min.css';
+
 import InstantVuetify from 'instant-vuetify-overlays';
 
-Vue.use(Vuetify, {
-    iconfont: 'mdi',
-    theme: {
-        primary: colors.blue.darken2,
-    },
-});
+Vue.use(Vuetify);
 Vue.use(InstantVuetify);
+
+export default new Vuetify({});
