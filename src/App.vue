@@ -1,14 +1,13 @@
 <template lang='pug'>
 v-app#app
     v-navigation-drawer(app temporary v-model='drawer')
-    v-toolbar(app color='primary' dark height='54px')
-        v-toolbar-side-icon.hidden-sm-and-up(@click.stop='drawer = !drawer')
-        v-toolbar-items
-            v-btn.title.font-weight-regular(flat :to='{ name: "Home" }' active-class='')
-                span {{ appName }}
+    v-system-bar
+    v-app-bar(app color='primary' dark height='54px')
+        v-app-bar-nav-icon.hidden-sm-and-up.nav-icon(@click.stop='drawer = !drawer')
+        v-toolbar-title {{ appName }}
         v-spacer
 
-        v-toolbar-items.hidden-xs-only
+        v-menu.hidden-xs-only
             //- メニュー
 
     v-content#content
@@ -30,4 +29,7 @@ export default class App extends Vue {
 
 #app
     background-color: transparent;
+
+    .nav-icon:before
+        opacity: 0;
 </style>
