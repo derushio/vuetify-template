@@ -11,8 +11,12 @@ scroll-view()
 // for html
 static-view()
     // height relay
-    &, body, #app, #app > div, #content, #content > div
+    &, body, #app, #app > div, #content
         width: 100%; height: 100%;
+        overflow-x: hidden; overflow-y: hidden;
+
+    #coutent > div
+        width: 100%;  height: calc(100vh - 54px);
         overflow-x: hidden; overflow-y: hidden;
 
 main-pane($max-width = 100%)
