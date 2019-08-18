@@ -4,18 +4,19 @@
 // for html
 scroll-view()
     width: 100vw; height: auto;
+    overflow-y: auto;
 
-    &, body, #app, #app > div, #content, #content > div
+    &, body, #app, .v-application--wrap, #content, .v-content__wrap
         overflow-x: hidden;
 
 // for html
 static-view()
     // height relay
-    &, body, #app, #app > div, #content
+    &, body, #app, .v-application--wrap, #content
         width: 100%; height: 100%;
         overflow-x: hidden; overflow-y: hidden;
 
-    #coutent > div
+    .v-content__wrap
         width: 100%;  height: calc(100vh - 54px);
         overflow-x: hidden; overflow-y: hidden;
 
