@@ -19,6 +19,7 @@
 /* tslint:disable:no-console */
 /// <reference path='../../node_modules/@types/node/index.d.ts' />
 import yargs from 'yargs';
+import * as mkdirp from 'mkdirp';
 
 yargs
     .version('1.0.0')
@@ -70,6 +71,7 @@ async function main() {
             .replace(/\$__CLASS_NAME__\$/g, name)
             .replace(/\$__VUE_NAME__\$/g, hyphen(name));
 
+        mkdirp.sync(`./src/${type}s/${path}`);
         fs.writeFileSync(`./src/${type}s/${path}${name}.vue`, compoText);
         console.log(chalk.green(`Success create: /src/${type}s/${path}${name}.vue`));
     } catch (e) {
